@@ -29,7 +29,12 @@ app.use('/users', usersRouter);
 app.use('/create', createRouter);
 app.use('/delete', deleteRouter);
 app.use('/edit', editRouter);
+
+//using the public folder at the root of the project
 app.use(express.static("public/images"))
+
+//using the images folder at the route /images
+app.use("/images", express.static("images"))
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
