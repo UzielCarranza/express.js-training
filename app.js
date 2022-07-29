@@ -11,6 +11,7 @@ var editRouter = require('./routes/put');
 var deleteRouter = require('./routes/delete');
 var nextRouter = require('./routes/next');
 var downloadRouter = require('./routes/download');
+var redirectRouter = require('./routes/redirect')
 
 
 
@@ -33,6 +34,7 @@ app.use('/delete', deleteRouter);
 app.use('/edit', editRouter);
 app.use('/next', nextRouter);
 app.use('/download', downloadRouter);
+app.use('/redirect', redirectRouter);
 
 //using the public folder at the root of the project
 app.use(express.static("public/images"))
