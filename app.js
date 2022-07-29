@@ -10,6 +10,7 @@ var createRouter = require('./routes/create');
 var editRouter = require('./routes/put');
 var deleteRouter = require('./routes/delete');
 var nextRouter = require('./routes/next');
+var downloadRouter = require('./routes/download');
 
 
 
@@ -31,6 +32,7 @@ app.use('/create', createRouter);
 app.use('/delete', deleteRouter);
 app.use('/edit', editRouter);
 app.use('/next', nextRouter);
+app.use('/download', downloadRouter);
 
 //using the public folder at the root of the project
 app.use(express.static("public/images"))
