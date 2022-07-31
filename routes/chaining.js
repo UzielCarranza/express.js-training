@@ -5,7 +5,8 @@ var router = express.Router();
 
 router.route('/').get(function (req, res, next) {
 
-    res.send("retrieve class info")
+    // res.send("retrieve class info")
+    throw new Error();
 }).post(function (req, res, next) {
 
     res.send("create class info")
